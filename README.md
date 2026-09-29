@@ -172,17 +172,35 @@ public class Envios {
 }
 
 
+1. ¿Por qué aparecen los valores null, 0.0 y false al crear un paquete sin constructor?
+Porque Java coloca valores por defecto cuando los atributos no tienen un valor asignado.
+2. ¿Por qué new Paquete() dejó de compilar?
+Porque al crear un constructor con parámetros, Java deja de crear automáticamente el constructor vacío.
+3. ¿Qué versión de calcularCosto() se ejecuta con p1.calcularCosto()?
+Se ejecuta la versión que no recibe parámetros.
+4. ¿Qué versión de calcularCosto() se ejecuta con p1.calcularCosto(4000)?
+Se ejecuta la versión que recibe un double.
+5. ¿Por qué p1.calcularCosto("4000") no compila?
+Porque no existe una versión del método que reciba un String.
+6. ¿Cuáles constructores de Habitacion pueden existir al mismo tiempo?
+Habitacion(int, String), Habitacion(String, int) y Habitacion(int) pueden existir juntos. Los dos primeros con int, String no pueden existir juntos porque tienen la misma firma.
+7. ¿Qué hace el método esPesado()?
+Devuelve true si el paquete pesa más de 5 kilos.
+8. ¿Qué hace mostrarInformacion(String encabezado)?
+Muestra el encabezado y después muestra la información del paquete.
+9. ¿Qué demuestra el paso por valor con double?
+Que cambiar el parámetro dentro del método no cambia la variable original.
+10. ¿Qué diferencia hay entre un constructor y un método?
+El constructor inicializa el objeto y el método realiza una acción. Además, el constructor no tiene tipo de retorno.
+11. ¿Qué pasa con peso = peso en vez de this.peso = peso?
+Compila, pero el atributo no cambia porque el parámetro se asigna a sí mismo.
+12. ¿Qué es la firma de un método?
+Es el nombre del método junto con sus parámetros.
+13. ¿Por qué el tipo de retorno no sirve para diferenciar métodos sobrecargados?
+Porque la sobrecarga se diferencia por los parámetros, no por el tipo de retorno.
+14. ¿Qué ventaja tiene usar this(...) en los constructores?
+Permite reutilizar otro constructor y evita repetir código.
 
-1.	¿Qué diferencia hay entre un constructor y un método?
-El constructor sirve para crear e inicializar un objeto. El método sirve para hacer alguna acción con ese objeto.
-2.	¿Por qué deja de funcionar new Paquete()?
-Porque al crear un constructor personalizado, Java ya no crea automáticamente el constructor vacío. Para usarlo, hay que agregar public Paquete() { }.
-3.	¿Qué pasa con peso = peso?
-No cambia el atributo porque está asignando el parámetro a sí mismo. Por eso se usa this.peso = peso.
-4.	¿Qué es la firma de un método?
-Es el nombre del método junto con sus parámetros. El tipo de retorno no sirve para diferenciar métodos.
-5.	¿Para qué sirve this(...)?
-Sirve para llamar otro constructor de la misma clase y así no repetir código.
 
 
 
